@@ -3,7 +3,17 @@ def add_patient():
     pass
 
 def view_patients():
-    pass
+    if not patients:
+        print("No patients found.")
+        return
+
+    for patient_id, details in patients.items():
+        print("Patient ID:", patient_id)
+        print("Name:", details["name"])
+        print("Age:", details["age"])
+        print("Department:", details["department"])
+        print("Room:", details["room"])
+        print("--------------------")
 
 def search_patient():
     pass
